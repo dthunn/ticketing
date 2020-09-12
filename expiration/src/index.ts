@@ -3,6 +3,8 @@ import { OrderCreatedListener } from './events/listeners/order-created-listener'
 
 // Connect to Mongodb and start app
 const start = async () => {
+  console.log('expiration')
+
   if (!process.env.NATS_CLIENT_ID) {
     throw new Error('NATS_CLIENT_ID must be defined')
   }
